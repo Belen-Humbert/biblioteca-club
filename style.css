@@ -1,0 +1,110 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff6347; /* Example hover color */
+}
+
+.content {
+  z-index: 1;
+}
+
+.scroll-down {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.down-arrow {
+  font-size: 40px;
+  color: #fff;
+  animation: bounce 2s infinite;
+}
+
+
+.section {
+  padding: 50px;
+  text-align: center;
+}
+
+#sobre-nosotros, #contacto {
+  background-color: #fff;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .navbar a {
+      font-size: 16px;
+  }
+
+}
+
+
