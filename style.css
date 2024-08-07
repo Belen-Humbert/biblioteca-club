@@ -46,9 +46,18 @@ body, html {
   width: 100%;
   padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   z-index: 1000;
 }
+
+.logo {
+  border-radius: 50%;
+  margin-right: 1100px; /* Espacio entre el logo y los demás elementos de la navegación */
+  width: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+  height: 100px; /* Asegúrate de que el ancho y el alto sean iguales para mantener la forma circular */
+}
+
+
 
 .navbar ul {
   list-style: none;
