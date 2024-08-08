@@ -37,6 +37,22 @@ header {
     margin-right: auto; /* Empuja los ítems de navegación al inicio */
 }
 
+
+.navbar-nav .nav-link {
+  color: white; /* Color de texto predeterminado */
+  transition: color 0.3s; /* Transición suave para el hover */
+}
+
+.navbar-nav .nav-link:hover {
+  color: orange !important;
+}
+
+
+.navbar-nav .nav-link:hover {
+  color: orange; /* Color del texto al pasar el mouse */
+}
+
+
 .navbar-nav .nav-link {
     color: white !important; /* Color de texto blanco */
     display: flex;
@@ -46,15 +62,17 @@ header {
     font-size: 25px; /* Tamaño del texto */
 }
 
-.navbar-nav .nav-link:hover {
-    color: orange !important; /* Color de texto naranja al pasar el cursor */
+.navbar-social a {
+  color: white; /* Color de texto predeterminado */
+  font-size: 24px; /* Tamaño de fuente de los iconos */
+  margin-left: 15px; /* Espaciado entre los iconos */
+  transition: color 0.3s; /* Transición de color para el efecto hover */
 }
 
-
-
-.navbar-social .nav-link:hover {
-    color: orange !important; /* Color de los íconos al pasar el cursor */
+.navbar-social a:hover {
+  color: orange; /* Color de texto cuando el mouse está sobre el enlace */
 }
+
 
 .logo {
     width: 50px;
