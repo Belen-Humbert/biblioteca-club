@@ -1,0 +1,348 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: transparent !important; /* Fondo transparente */
+    display: flex;
+    justify-content: center; /* Centrar el contenido de la barra de navegación */
+    width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho disponible */
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuir los elementos dentro del contenedor */
+    width: 100%; /* Asegura que el contenedor de navegación ocupe todo el ancho disponible */
+}
+
+.navbar-nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Empuja los ítems de navegación al inicio */
+}
+
+.navbar-nav .nav-link {
+    color: white !important; /* Color de texto blanco */
+    display: flex;
+    align-items: center;
+    margin: 0 10px; /* Espaciado entre ítems */
+    font-family: 'Shadows Into Light';
+    font-size: 25px; /* Tamaño del texto */
+}
+
+.navbar-nav .nav-link:hover {
+    color: orange !important; /* Color de texto naranja al pasar el cursor */
+}
+
+
+
+.navbar-social .nav-link:hover {
+    color: orange !important; /* Color de los íconos al pasar el cursor */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+video#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.video-overlay h1 {
+    font-size: 80px; /* Tamaño grande para h1 */
+    margin: 0;
+    font-family: 'Rock Salt', cursive;
+}
+
+.video-overlay h6 {
+    font-size: 40px; /* Tamaño grande para h6 */
+    margin: 10px 0 0;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+
+.video-overlay p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+section {
+    padding: 60px 20px;
+    background-color: black;
+    color: white;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Rock Salt', cursive;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
+@mixin mQ($rem) {
+  @media screen and (min-width: $rem) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e8eaef;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+}
+
+section {
+background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding-block: min(20vh, 5rem);
+  text-align: center;
+  width: calc(min(90rem, 90%));
+  margin-inline: auto;
+
+  p,
+  h2,
+  h3 {
+    letter-spacing: 0.035rem;
+  }
+
+  p {
+    line-height: 1.7;
+    color: #454545;
+    max-width: 70rem;
+    margin: 0 auto;
+    font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+  }
+
+  h2 {
+    font-size: clamp(3rem, 2.4286rem + 2.2857vw, 5rem);
+    color: #111;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .cards {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+    gap: 2rem;
+
+    @include mQ(51rem) {
+      gap: 3.5rem;
+    }
+
+    .card {
+      position: relative;
+      text-align: left;
+
+      .social-icon {
+        background: #111;
+        padding: 1rem 1.75rem;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+
+        i {
+          color: #fff;
+          font-size: 1.4rem;
+        }
+
+        &:hover i {
+          color: #003ef5;
+        }
+      }
+
+      img {
+        filter: grayscale(100%);
+        transition: 0.5s ease;
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+
+      .card-content-wrapper {
+        margin-left: auto;
+        max-width: 90%;
+
+        .card-content {
+          display: block;
+          background: white;
+          transition: 0.5s ease;
+          padding: 4.5rem 2rem 0 3.2rem;
+
+          > div {
+            text-align: right;
+          }
+
+          h3,
+          p {
+            text-transform: capitalize;
+          }
+
+          h3 {
+            font-size: clamp(1.15rem, 1.1071rem + 0.1714vw, 1.3rem);
+            font-weight: 800;
+            color: #111;
+          }
+          p {
+            color: #454545;
+            font-size: 0.9rem;
+          }
+
+          svg {
+            display: inline-block;
+            text-align: right;
+            width: 60px;
+            color: #003ef5;
+          }
+        }
+      }
+
+      /*hover states*/
+      .card-img-wrapper:hover ~ .card-content-wrapper .card-content {
+        background: #003ef5;
+
+        h3,
+        p,
+        svg {
+          color: #fff;
+        }
+      }
+
+      .card-content-wrapper:hover .card-content {
+        background: #003ef5;
+
+        h3,
+        p,
+        svg {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* SECCIÓN C O N T A C T O */
+.contacto{
+    background:
+    linear-gradient(rgba(0,12,103,0.5), rgba(0,12,103,0.3)),
+        url('images/img2.jpg');
+        background-size: cover;
+        color: #fff;
+        margin-top: 100px;
+        padding: 80px 20px;
+}
+.contacto .contenedor-contacto{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.contacto .contenedor-contacto .fila{
+    display: flex;
+}
+.contacto .contenedor-contacto .fila .col{
+    width: 50%;
+}
+.contacto .contenedor-contacto .info{
+    margin-bottom: 30px;
+    border-left: 3px solid #8d8d8d;
+    padding-left: 8px;
+}
+.contacto .contenedor-contacto .info p{
+    color: #8d8d8d;
+}
+.contacto input, .contacto textarea{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid #8d8d8d ;
+    margin-bottom: 20px;
+    outline: none;
+    color: #060270;
+}
+.contacto .btn{
+    background-color: none;
+    padding: 5px 40px;
+    border: 2px solid;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff5b00, #ff9900);
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 14px;
+    text-align: center;
+}
