@@ -152,11 +152,6 @@ section p {
   box-sizing: border-box;
 }
 
-body {
-  background: #e8eaef;
-  min-height: 100vh;
-}
-
 a {
   text-decoration: none;
 }
@@ -307,15 +302,19 @@ background-color: #fff;
 
 
 /* SECCIÓN C O N T A C T O */
-.contacto{
-    background:
-    linear-gradient(rgba(0,12,103,0.5), rgba(0,12,103,0.3)),
-        url('images/img2.jpg');
-        background-size: cover;
-        color: #fff;
-        margin-top: 100px;
-        padding: 80px 20px;
+.contacto {
+  background: 
+      linear-gradient(rgba(0,12,103,0.5), rgba(0,12,103,0.3)),
+      url('images/img2.jpg');
+  background-size: cover;
+  color: #fff;
+  margin-top: 100px;
+  padding: 80px 20px;
+  width: 100vw; 
+  margin-left: calc(-50vw + 50%); 
+  position: relative; 
 }
+
 .contacto .contenedor-contacto{
     max-width: 1100px;
     margin: auto;
