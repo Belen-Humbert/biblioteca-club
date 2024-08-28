@@ -14,8 +14,13 @@ header {
 .navbar {
     background-color: transparent !important; /* Fondo transparente */
     display: flex;
-    justify-content: center; /* Centrar el contenido de la barra de navegación */
-    width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho disponible */
+    justify-content: center; 
+    width: 100%; 
+}
+
+.navbar.bg-solid {
+  background-color: black; /* Cambia esto al color que prefieras */
+  transition: background-color 0.3s ease;
 }
 
 .navbar-collapse {
@@ -49,7 +54,7 @@ header {
 
 
 .navbar-nav .nav-link:hover {
-  color: orange; /* Color del texto al pasar el mouse */
+  color: orange; 
 }
 
 
@@ -135,8 +140,6 @@ section p {
     line-height: 1.6;
     font-family: 'Montserrat Alternates', sans-serif;
 }
-
-
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
@@ -304,10 +307,8 @@ background-color: #fff;
 /* SECCIÓN C O N T A C T O */
 .contacto {
   background: 
-      linear-gradient(rgba(0,12,103,0.5), rgba(0,12,103,0.3)),
-      url('images/img2.jpg');
+      linear-gradient(rgba(0,12,103,0.5), rgba(0,12,103,0.3));
   background-size: cover;
-  color: #fff;
   margin-top: 100px;
   padding: 80px 20px;
   width: 100vw; 
@@ -356,10 +357,28 @@ background-color: #fff;
     background: linear-gradient(to right, #ff5b00, #ff9900);
 }
 
-footer{
-    background-color: #000;
-    color: #fff;
-    padding: 7px 0;
-    font-size: 14px;
-    text-align: center;
+
+/* Añadir estilo para los íconos de redes sociales */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Tamaño del botón */
+  height: 50px; /* Tamaño del botón */
+  border-radius: 50%; /* Botón redondeado */
+  background-color: linear-gradient(rgba(0,12,103,0.5), rgba(0,12,103,0.3)); /* Fondo del botón */
+  color: white; /* Color del ícono */
+  margin: 10px; /* Espaciado entre botones */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.social-btn:hover {
+  background-color: #007be5; /* Cambiar color de fondo en hover */
+  color: #fff; /* Color del ícono en hover */
+}
+
+/* Tamaño del ícono */
+.social-btn i {
+  font-size: 24px; /* Tamaño del ícono */
 }
