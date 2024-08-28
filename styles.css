@@ -106,7 +106,7 @@ video#bg-video {
 }
 
 .video-overlay h1 {
-    font-size: 80px; /* Tamaño grande para h1 */
+    font-size: clamp(30px, 5vw, 80px); /* Tamaño de fuente mínimo, preferido y máximo */
     margin: 0;
     font-family: 'Rock Salt', cursive;
 }
